@@ -68,7 +68,8 @@ S3_BUCKET_NAME = "your-s3-bucket-name"
 ```bash
 uvicorn app.main:app --reload
 ```
-This will start the API server on http://127.0.0.1:8000.
+This will start the API server on http://127.0.0.1:8000.  
+
 2. Test the OCR and File Upload Process
 - You can upload invoice images via the FastAPI endpoints.
 - The invoice image will be processed, and the extracted data will be stored in MongoDB.
