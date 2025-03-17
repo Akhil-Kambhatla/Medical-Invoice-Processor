@@ -45,8 +45,8 @@ pip install -r requirements.txt
 
 ### 3. MongoDB Configuration
 To store invoice data, configure the MongoDB database:
--Ensure your MongoDB is running (either locally or on MongoDB Atlas).
--Set the connection string in your **config.py** or environment variables.
+- Ensure your MongoDB is running (either locally or on MongoDB Atlas).
+- Set the connection string in your **config.py** or environment variables.
 
 ```bash
 MONGO_URI = "mongodb://localhost:27017"
@@ -54,9 +54,9 @@ MONGO_URI = "mongodb://localhost:27017"
 
 ### 4. S3 Configuration
 To upload invoice images to Amazon S3, you’ll need to configure your AWS credentials.
--Set up IAM roles and policies in AWS for EC2 to interact with S3 and MongoDB.
--Ensure your EC2 instance has the necessary IAM permissions to interact with S3.
--Set the bucket name in your **config.py** or environment variables:
+- Set up IAM roles and policies in AWS for EC2 to interact with S3 and MongoDB.
+- Ensure your EC2 instance has the necessary IAM permissions to interact with S3.
+- Set the bucket name in your **config.py** or environment variables:
 
 ```bash
 S3_BUCKET_NAME = "your-s3-bucket-name"
@@ -70,9 +70,9 @@ uvicorn app.main:app --reload
 ```
 This will start the API server on http://127.0.0.1:8000.
 2. Test the OCR and File Upload Process
--You can upload invoice images via the FastAPI endpoints.
--The invoice image will be processed, and the extracted data will be stored in MongoDB.
--The image will be uploaded to your specified S3 bucket.
+- You can upload invoice images via the FastAPI endpoints.
+- The invoice image will be processed, and the extracted data will be stored in MongoDB.
+- The image will be uploaded to your specified S3 bucket.
 
 
 ### 6. Deploying on EC2
